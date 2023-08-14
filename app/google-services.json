@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "994067780766",
+    "project_id": "talper2-efd4b",
+    "storage_bucket": "talper2-efd4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994067780766:android:a26f9f2f80c5dcc9e8178f",
+        "android_client_info": {
+          "package_name": "com.example.talper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994067780766-k52u2lom23k5qsvfdange4cmoqf75o7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoBXOJtEPyG0EUTKI1ux06kSUp9PInHdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994067780766-k52u2lom23k5qsvfdange4cmoqf75o7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

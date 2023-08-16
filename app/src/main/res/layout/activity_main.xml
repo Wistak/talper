@@ -6,39 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/usuarioText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView4"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="text" />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="322dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="361dp"
+            android:text="Acceder"
+            app:layout_constraintBottom_toBottomOf="@id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usuarioText"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="19dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/loginButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usuarioText" />
 
+        <EditText
+            android:id="@+id/usuarioText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordText"
-        android:layout_centerHorizontal="true"
-        android:text="Acceder" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="216dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="141dp"
+            android:layout_marginEnd="88dp"
+            android:layout_marginBottom="47dp"
+            android:text="Exámen Técnico"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/usuarioText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.talper;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText usuarioText;
     private EditText passwordText;
-    private EditText puestoText;
     private Button loginButton;
 
     ArrayList<UsersItem> usersItemArrayList;
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String id = "user" + new Date().getTime();
                 String usuario = usuarioText.getText().toString();
                 String contrasena = passwordText.getText().toString();
 
@@ -64,14 +63,14 @@ public class MainActivity extends AppCompatActivity {
                                     Log.e("JUAJUA", "Logueado " + userPassword);
                                     int duration = Toast.LENGTH_SHORT;
                                     CharSequence mensaje = "Bienvenido" + usuario;
+
                                     Intent i = new Intent(getApplicationContext(), Perfil.class);
                                     startActivity(i);
                                 } else {
-                                    Log.e("JUAJUA", "Nel homs contraseña incorrecta" + " " + contrasena.getClass().getName() + " " + userPassword.getClass().getName());
-                                }
+                                    Toast.makeText(MainActivity.this, "Usuario o contraseña incorrectos.", Toast.LENGTH_SHORT).show();                                }
                             }
                         } else {
-                            Log.e("JUAJUA", "No existe" + String.valueOf(snapshot));
+                            Log.e("Error", "No existe" + String.valueOf(snapshot));
                         }
 
 
@@ -81,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError error) {
                     }
                 });
-
-               //db.child("usuarios").child(id).setValue(new UsersItem(id, usuario, contrasena, puesto));
 
             }
 
